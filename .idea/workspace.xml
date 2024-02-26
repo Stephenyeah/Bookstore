@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11b4fe60-7144-42b8-a57b-9690198e7292" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/domain/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/domain/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/BookstoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/BookstoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/web/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fi/haagahelia/bookstore/web/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/booklist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/booklist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fi/haagahelia/bookstore/BookstoreApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fi/haagahelia/bookstore/BookstoreApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fi/haagahelia/bookstore/domain/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fi/haagahelia/bookstore/domain/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fi/haagahelia/bookstore/web/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fi/haagahelia/bookstore/web/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/addbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/booklist.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/booklist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +51,8 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "S:/IT/2nd-year/back-end/Database-JPA/customer",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "last_opened_file_path": "S:/ScanSQ-food-menu",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">

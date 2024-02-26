@@ -1,7 +1,13 @@
 package fi.haagahelia.bookstore.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
@@ -13,18 +19,17 @@ public class Category {
     private long categoryId;
     private String name;
 
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy =  "category")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private List<Book> books;
 
-    public Category() {}
+    public Category() {
+    }
 
     public Category(String name) {
         super();
         this.name = name;
 
     }
-
 
     public long getCategoryId() {
         return categoryId;
@@ -38,7 +43,6 @@ public class Category {
         return books;
     }
 
-
     public void setCategoryId(long id) {
         this.categoryId = id;
     }
@@ -50,8 +54,6 @@ public class Category {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
-
-
 
     @Override
     public String toString() {

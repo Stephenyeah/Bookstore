@@ -1,8 +1,12 @@
 package fi.haagahelia.bookstore.domain;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Book {
@@ -15,12 +19,12 @@ public class Book {
     private int publicationYear;
     private long isbn;
 
-
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    private  Category  category;
+    private Category category;
 
-    public Book() {}
+    public Book() {
+    }
 
     public Book(String title, String author, int year, long isbn) {
         super();
@@ -37,7 +41,6 @@ public class Book {
         this.isbn = isbn;
         this.category = category;
     }
-
 
     public long getId() {
         return id;
@@ -63,7 +66,6 @@ public class Book {
         return category;
     }
 
-
     public void setId(long id) {
         this.id = id;
     }
@@ -88,13 +90,13 @@ public class Book {
         this.category = category;
     }
 
-
-
     @Override
     public String toString() {
-        if(this.category != null)
-            return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + publicationYear + ", isbn=" + isbn + ", category=" + this.getCategory() + "]";
+        if (this.category != null)
+            return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + publicationYear
+                    + ", isbn=" + isbn + ", category=" + this.getCategory() + "]";
         else
-            return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + publicationYear + ", isbn" + isbn + "]";
+            return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + publicationYear + ", isbn"
+                    + isbn + "]";
     }
 }

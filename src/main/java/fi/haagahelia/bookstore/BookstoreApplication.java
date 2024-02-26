@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.stream.Stream;
 
-
 @SpringBootApplication
 public class BookstoreApplication {
 
@@ -24,21 +23,23 @@ public class BookstoreApplication {
 	}
 
 	@Bean
-	public CommandLineRunner bookDemo(BookRepository repository,CategoryRepository drepository){
+	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository drepository) {
 		return (args) -> {
 			log.info("save a couple of category");
-			Stream.of("Fiction","Mystery","Romance","Science Fiction","Fantasy","Biography").forEach(name ->{
+			Stream.of("Fiction", "Mystery", "Romance", "Science Fiction", "Fantasy", "Biography").forEach(name -> {
 				drepository.save(new Category(name));
 			});
 
 			log.info("save a couple of books");
-			repository.save(new Book("The Old Man and the Sea", "Ernest Hemingway", 1952, 97819075-9027-6,drepository.findByName("Fiction").get(0)));
-			repository.save(new Book("Romance of the Three Kingdoms", "Luo Guanzhong", 1907, 8951346,drepository.findByName("Fiction").get(0)));
+			brepository.save(new Book("The Old Man and the Sea", "Ernest Hemingway", 1952, 97819075 - 9027 - 6,
+					drepository.findByName("Fiction").get(0)));
+			brepository.save(new Book("Romance of the Three Kingdoms", "Luo Guanzhong", 1907, 8951346,
+					drepository.findByName("Fiction").get(0)));
 
 			log.info("fetch all books");
-			for (Book book : repository.findAll()){
+			for (Book book : brepository.findAll()) {
 				log.info(book.toString());
-				}
+			}
 
 		};
 	}

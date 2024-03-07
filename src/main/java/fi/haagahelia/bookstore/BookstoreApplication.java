@@ -29,7 +29,7 @@ public class BookstoreApplication {
 	/**
 	 * Save demo users, courses and students to H2 DB
 	 * 
-	 * @param repository
+	 * @param brepository
 	 * @return
 	 */
 

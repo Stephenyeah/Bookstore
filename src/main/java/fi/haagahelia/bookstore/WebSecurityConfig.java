@@ -31,7 +31,7 @@ public class WebSecurityConfig {
                                 mvcMatcherBuilder.pattern("/saveuser"))
                         .permitAll()
                         .anyRequest().authenticated())
-                .formLogin(form -> form.loginPage("/login").defaultSuccessUrl("/students", true).permitAll())
+                .formLogin(form -> form.loginPage("/login").defaultSuccessUrl("/booklist", true).permitAll())
                 .logout(logout -> logout.permitAll()).build();
 
     }

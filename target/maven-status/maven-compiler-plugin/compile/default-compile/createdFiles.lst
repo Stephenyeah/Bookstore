@@ -1,0 +1,10 @@
+fi\haagahelia\bookstore\BookstoreApplication.class
+fi\haagahelia\bookstore\WebSecurityConfig.class
+fi\haagahelia\bookstore\service\UserDetailServiceImpl.class
+fi\haagahelia\bookstore\domain\CategoryRepository.class
+fi\haagahelia\bookstore\domain\Book.class
+fi\haagahelia\bookstore\web\BookController.class
+fi\haagahelia\bookstore\domain\User.class
+fi\haagahelia\bookstore\domain\Category.class
+fi\haagahelia\bookstore\domain\BookRepository.class
+fi\haagahelia\bookstore\domain\UserRepository.class

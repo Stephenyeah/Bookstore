@@ -1,3 +1,4 @@
+package fi.haagahelia.bookstore;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,9 +14,11 @@ import fi.haagahelia.bookstore.domain.Category;
 import fi.haagahelia.bookstore.domain.CategoryRepository;
 
 @DataJpaTest
-public class BookRepositoryTest{
+public class JPABookRepositoryTest{
 	@Autowired
 	private BookRepository repository;
+	@Autowired
+	private CategoryRepository drepository;
 
 	@Test 
 	public void findByNameShouldReturnBook(){
@@ -25,13 +28,23 @@ public class BookRepositoryTest{
 	}
 
     @Test
-    public void createNewBook(){
-        Category category = new Category("Mystery");
-        CategoryRepository.save(category);
+    public void createNewBook(){     
+		Category category = new Category("Mystery");
+		drepository.save(category);
 
-        Book book = new Book("Mickey","Mouse",1968,783434343,new Category("Mystery"));
+        Book book = new Book("Mickey","Mouse",1968,783434343,category);
         
+		repository.save(book);
     }
+	@Test
+	public void deleteNewBook(){
+		List<Book> books = repository.findByAuthor("Ernest Hemingway");
+		Book book = books.get(0);
+		repository.delete(book);
+		List<Book> newBooks = repository.findByAuthor("Ernest Hemingway");
+		assertThat(newBooks).hasSize(0);
+	}
 
+	
 
 }
